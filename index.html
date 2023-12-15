@@ -206,14 +206,64 @@
 <h1 id="六、交叉报表"><a href="#六、交叉报表" class="headerlink" title="六、交叉报表"></a>六、交叉报表</h1><p>交叉报表是常见的基本报表类型，交叉报表同时包含横向扩展交叉报表和纵向扩展交叉报表，交叉报表的特点是表头是由上表头和左表头组成，如下图所示：</p>
 <p><img src="/../images/image44.png"></p>
 <h2 id="6-1-报表设计"><a href="#6-1-报表设计" class="headerlink" title="6.1 报表设计"></a>6.1 报表设计</h2><p>（1）按照下面表格中的说明设计表格样式：</p>
-<p>  单元格   操作</p>
-<hr>
-<p>  A1~C2   合并A1~C2单元格，选中单元格，点击【斜线】按钮。在单元格内写入：区域|省份|城市|产品|日期。（报表斜表头需要多次点击斜线按钮。点击一下产生一根斜线，点击多下产生多根斜线，将需要分隔的内容用“|”隔开，点击保存后，在预览页面展示效果。）<br>  E1~E2   合并单元格，写入字段【销量总计】<br>  A1~E2   修改单元格填充色</p>
+<table>
+<thead>
+<tr>
+<th align="center">单元格</th>
+<th align="center">操作</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">A1~C2</td>
+<td align="center">合并A1~C2单元格，选中单元格，点击【斜线】按钮。在单元格内写入：区域|省份|城市|产品|日期。（报表斜表头需要多次点击斜线按钮。点击一下产生一根斜线，点击多下产生多根斜线，将需要分隔的内容用“</td>
+</tr>
+<tr>
+<td align="center">E1~E2</td>
+<td align="center">合并单元格，写入字段【销量总计】</td>
+</tr>
+<tr>
+<td align="center">A1~E2</td>
+<td align="center">修改单元格填充色</td>
+</tr>
+</tbody></table>
 <p>效果如下图：</p>
 <p>（2）按照下面表格中的说明将数据集中数据列拖入到对应单元格中，并对单元格属性进行设置</p>
-<p>  单元格   操作</p>
-<hr>
-<p>  A3       拖入sales数据集【region】字段，单元格默认【纵向扩展】，聚合类型选择【分组】<br>  B3       拖入sales数据集【province】字段，单元格默认【纵向扩展】，聚合类型选择【分组】，默认左主格为A3<br>  C3       拖入sales数据集【city】字段，单元格默认【纵向扩展】，聚合类型选择【分组】，默认左主格为B3<br>  D3       拖入sales数据集【sales_volume】字段，由于C3、D2能确定唯一的销量值，故D3无需扩展方向，单元格选择扩展方向【无】，聚合类型默认【列表】，默认左主格为C3，填写上主格为D2<br>  D1       拖入sales数据集【month】字段，单元格选择扩展方向为【横向扩展】，聚合类型选择【分组】<br>  D2       拖入sales数据集【product】字段，单元格选择扩展方向为【横向扩展】，聚合类型选择【分组】，默认上主格为D1<br>  E3       对D3单元格求和，选择求和公式sum（D3）</p>
+<table>
+<thead>
+<tr>
+<th align="center">单元格</th>
+<th align="center">操作</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">A3</td>
+<td align="center">拖入sales数据集【region】字段，单元格默认【纵向扩展】，聚合类型选择【分组】</td>
+</tr>
+<tr>
+<td align="center">B3</td>
+<td align="center">拖入sales数据集【province】字段，单元格默认【纵向扩展】，聚合类型选择【分组】，默认左主格为A3</td>
+</tr>
+<tr>
+<td align="center">C3</td>
+<td align="center">拖入sales数据集【city】字段，单元格默认【纵向扩展】，聚合类型选择【分组】，默认左主格为B3</td>
+</tr>
+<tr>
+<td align="center">D3</td>
+<td align="center">拖入sales数据集【sales_volume】字段，由于C3、D2能确定唯一的销量值，故D3无需扩展方向，单元格选择扩展方向【无】，聚合类型默认【列表】，默认左主格为C3，填写上主格为D2</td>
+</tr>
+<tr>
+<td align="center">D1</td>
+<td align="center">拖入sales数据集【month】字段，单元格选择扩展方向为【横向扩展】，聚合类型选择【分组】</td>
+</tr>
+<tr>
+<td align="center">D2</td>
+<td align="center">拖入sales数据集【product】字段，单元格选择扩展方向为【横向扩展】，聚合类型选择【分组】，默认上主格为D1</td>
+</tr>
+<tr>
+<td align="center">E3</td>
+<td align="center">对D3单元格求和，选择求和公式sum（D3）</td>
+</tr>
+</tbody></table>
 <p>选中A1~E3，将所有字体居中，修改A3~E3单元格的填充色，效果如下图：</p>
 <p><img src="/../images/image45.png"></p>
 <p>预览效果如下图：</p>
@@ -222,7 +272,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/12/15/index/" data-id="clq5wwwlb000028v7ef61g4n0" data-title="BI报表操作手册" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      <a data-url="http://example.com/2023/12/15/index/" data-id="clq5y22rg0000asv7aeq27jbb" data-title="BI报表操作手册" class="article-share-link"><span class="fa fa-share">分享</span></a>
       
       
       
